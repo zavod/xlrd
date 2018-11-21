@@ -424,7 +424,7 @@ class CompDoc(object):
         while s >= 0:
             if self.seen[s]:
                 print("_locate_stream(%s): seen" % qname, file=self.logfile); dump_list(self.seen, 20, self.logfile)
-                raise CompDocError("%s corruption: seen[%d] == %d" % (qname, s, self.seen[s]))
+               # raise CompDocError("%s corruption: seen[%d] == %d" % (qname, s, self.seen[s]))
             self.seen[s] = seen_id
             tot_found += 1
             if tot_found > found_limit:
